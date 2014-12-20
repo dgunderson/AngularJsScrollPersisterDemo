@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>Scroll Persister Demo</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-route.min.js"></script>
+<script src="app.js"></script>
+<script src="home-controller.js"></script>
+<script src="scroll-persister-service.js"></script>
+<script src="scroll-persister-directive.js"></script>
+
+
+<style>
+.sample-scroller {
+	overflow: auto;
+	width: 500px;
+	height: 200px;
+	border: 1px solid #000;
+}
+</style>
+
+</head>
+<body>
+
+<div data-ng-app="ScrollPersisterApp">
+    <div data-ng-view="">
+    	
+    </div>
+</div>
+
+</body>
+</html>

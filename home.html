@@ -1,10 +1,10 @@
 <h1>Welcome to the scroll persister.</h1>
 <h2>Move the scroll position of the div and then click 'Reload Route'</h2>
-<h3>Route has been reloated {{ vm.GetReloadCount() }} times.</h3>
+<h3>Route has been reloaded {{ vm.GetReloadCount() }} times.</h3>
 
 <input type="button" data-ng-click="vm.ReloadRoute()" value="Reload Route" />
 
-<div class="sample-scroller" data-scroll-persister="vm.GetScrollTop()">
+<div class="sample-scroller" data-scroll-persister="">
 	<p>This text will scroll</p>
 	<p>This text will scroll</p>
 	<p>This text will scroll</p>

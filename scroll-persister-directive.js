@@ -12,10 +12,7 @@
 				});
 
 				element[0].onscroll = function () {
-					var scrollTop = element[0].scrollTop;
-
-					if (scrollTop !== 0)
-						scope.vm.SetScrollTop(element[0].scrollTop);
+					scope.vm.SetScrollTop(element[0].scrollTop);
 				}
 			}
 		};

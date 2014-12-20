@@ -7,13 +7,11 @@
 		return {
 			restrict: "A",
 			link: function (scope, element, attributes) {
-				scope.$watch(attributes.scrollPersister, function (newValue) {
-					element[0].scrollTop = newValue;
-				});
+				element[0].scrollTop = scrollPersisterService.GetScrollTop();
 
-				element[0].onscroll = function () {
+				scope.$on('$destroy', function () {
 					scrollPersisterService.SetScrollTop(element[0].scrollTop);
-				}
+				});
 			}
 		};
 	}

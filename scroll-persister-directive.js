@@ -1,9 +1,9 @@
 (function (angular) {
 	"use strict";
 
-	angular.module("ScrollPersisterApp").directive("scrollPersister", [scrollPersister]);
+	angular.module("ScrollPersisterApp").directive("scrollPersister", ["scrollPersisterService", scrollPersister]);
 
-	function scrollPersister() {
+	function scrollPersister(scrollPersisterService) {
 		return {
 			restrict: "A",
 			link: function (scope, element, attributes) {
@@ -12,7 +12,7 @@
 				});
 
 				element[0].onscroll = function () {
-					scope.vm.SetScrollTop(element[0].scrollTop);
+					scrollPersisterService.SetScrollTop(element[0].scrollTop);
 				}
 			}
 		};

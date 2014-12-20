@@ -7,7 +7,7 @@
 		return {
 			restrict: "A",
 			link: function (scope, element, attributes) {
-				scope.$watch(attributes.scrollPersister, function (newValue, oldValue) {
+				scope.$watch(attributes.scrollPersister, function (newValue) {
 					element[0].scrollTop = newValue;
 				});
 
